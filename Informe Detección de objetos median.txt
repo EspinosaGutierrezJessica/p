@@ -1,0 +1,18 @@
+Informe: Detección de objetos mediante sensor ultrasónico y encendido de LED
+
+El presente informe describe un código para Arduino que permite encender un LED cuando un sensor ultrasónico detecta la presencia de un objeto a una distancia específica.
+
+El código comienza definiendo las conexiones necesarias, asignando los pines correspondientes a los componentes utilizados. Se emplea el pin de disparo (trigPin) y el pin de eco (echoPin) del sensor ultrasónico, así como el pin del LED (ledPin) al que se conectará el diodo emisor de luz.
+
+En la función de configuración (setup), se establecen los modos de los pines como entrada o salida, según sea necesario. Además, se inicializa la comunicación serial para la visualización de resultados en el monitor serial.
+
+El programa principal se encuentra en la función loop, que se ejecuta de manera repetida. Dentro de esta función, se realizan los siguientes pasos:
+
+Se envía un pulso ultrasónico al sensor para activarlo y se espera la respuesta. Esto se logra mediante el control de los pines de disparo y eco.
+Se mide la duración del pulso de eco generado por el sensor ultrasónico.
+Utilizando la duración del eco, se calcula la distancia del objeto detectado en centímetros.
+Se imprime la distancia en el monitor serial para su visualización.
+Se verifica si la distancia detectada es menor o igual a la distancia de detección establecida. Si es así, se enciende el LED; de lo contrario, se apaga.
+Finalmente, se agrega un breve retardo antes de repetir el ciclo para permitir una nueva medición.
+
+Este código proporciona una base para crear un sistema de detección de objetos mediante un sensor ultrasónico y el control de un LED. Puede ser modificado y ampliado según las necesidades específicas del proyecto en cuestión.
